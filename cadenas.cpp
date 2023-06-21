@@ -104,8 +104,19 @@ int main()
      *
      */
 
-    string newCadena = cadena.replace(0, 5, "abc");
-    cout << newCadena << endl;
+    // string newCadena = cadena.replace(0, 5, "abc");
+    // cout << newCadena << endl;
+
+    /**
+     * @brief Invertir de una posicion a otra
+     *
+     * reverse(inicio + rango_A, fin + rango_B)
+     *
+     */
+    int a, b;
+    cin >> a >> b;
+    reverse(cadena.begin() + a, cadena.begin() + b);
+    cout << cadena << endl;
 
     return 0;
 }
