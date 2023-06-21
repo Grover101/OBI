@@ -127,18 +127,34 @@ int main()
      *
      */
 
-    cout << typeid(cadena).name() << endl;
-    // enteros
-    int numero = stoi(cadena);
-    cout << numero + 10 << endl;
+    // cout << typeid(cadena).name() << endl;
+    // // enteros
+    // int numero = stoi(cadena);
+    // cout << numero + 10 << endl;
 
-    // float
-    float numeroFloat = stof(cadena);
-    cout << numeroFloat + 1.5 << endl;
+    // // float
+    // float numeroFloat = stof(cadena);
+    // cout << numeroFloat + 1.5 << endl;
 
-    // double
-    double numeroDouble = stod(cadena);
-    cout << numeroDouble + 1.999999 << endl;
+    // // double
+    // double numeroDouble = stod(cadena);
+    // cout << numeroDouble + 1.999999 << endl;
+
+    /**
+     * @brief Ordenamiento de Cadena
+     *
+     */
+
+    // cadena => ordenada
+    // "Hola mundo" => " Halmndoou"
+    // 97 > 98 // 0
+    // int a = 'a' > 'b'; // 0
+    // 99 > 98 // 1
+    // int b = 'c' > 'b'; // 1
+
+    // sort(inicio, fin)
+    sort(cadena.begin(), cadena.end());
+    cout << cadena << endl;
 
     return 0;
 }
