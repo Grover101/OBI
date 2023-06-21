@@ -18,7 +18,7 @@ int main()
     // cin >> cadena;
     // obtiene cadenas con espacios
     getline(cin, cadena);
-    getline(cin, reemplazar);
+    // getline(cin, reemplazar);
 
     // ver un posicion
     // cout << cadena[5] << endl;
@@ -80,37 +80,32 @@ int main()
     // cout << pos << endl;
 
     // "hola mundo, como estas" => "hola mundo"
-    string aux = cadena.substr(0, 6);
-    cout << aux << endl;
+    // string aux = cadena.substr(0, 6);
+    // cout << aux << endl;
 
     // "hola mundo, como estas" => "mundo" => "Jose" => "hola Jose, como estas"
     // el if recibe true o false | -1, 5 | 0 2, 4, => 0 == false, 1(cualquier numero diferente de 0) == true
-    if (cadena.find(reemplazar) != -1)
-    {
-        int pos = cadena.find(reemplazar);
-        for (int i = pos; i < reemplazar.length(); i++)
-        {
-        }
+    // if (cadena.find(reemplazar) != -1)
+    // {
+    //     int pos = cadena.find(reemplazar);
+    //     for (int i = pos; i < reemplazar.length(); i++)
+    //     {
+    //     }
 
-        cout << cadena << endl;
-    }
-    else
-        cout << "la palabra no existe en la oracion\n";
+    //     cout << cadena << endl;
+    // }
+    // else
+    //     cout << "la palabra no existe en la oracion\n";
+
+    /**
+     * @brief Replace
+     *
+     * cadena.replace(pos_init, nro_posiciones, cadReemplzo)
+     *
+     */
+
+    string newCadena = cadena.replace(0, 5, "abc");
+    cout << newCadena << endl;
 
     return 0;
 }
-
-/**
- * input
- *
- * Oracion = "Hola mundo, como estas"
- * Reemplazo = "Jose"
- * PorCual = "mundo"
- *
- * Output
- *
- * "Hola Jose, como estas" => solo si encuentra
- *
- * caso constrario solo mostra la oracion
- *
- */
