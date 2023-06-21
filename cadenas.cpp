@@ -113,10 +113,32 @@ int main()
      * reverse(inicio + rango_A, fin + rango_B)
      *
      */
-    int a, b;
-    cin >> a >> b;
-    reverse(cadena.begin() + a, cadena.begin() + b);
-    cout << cadena << endl;
+    // int a, b;
+    // cin >> a >> b;
+    // reverse(cadena.begin() + a, cadena.begin() + b);
+    // cout << cadena << endl;
+
+    /**
+     * @brief Conversion de cadenas a int, float, doble
+     *
+     *  stoi(cadena) => para enteros (int)
+     *  stof(cadena) => para flotantes (float)
+     *  stod(cadena) => para flotantes grandes (doble)
+     *
+     */
+
+    cout << typeid(cadena).name() << endl;
+    // enteros
+    int numero = stoi(cadena);
+    cout << numero + 10 << endl;
+
+    // float
+    float numeroFloat = stof(cadena);
+    cout << numeroFloat + 1.5 << endl;
+
+    // double
+    double numeroDouble = stod(cadena);
+    cout << numeroDouble + 1.999999 << endl;
 
     return 0;
 }
