@@ -142,7 +142,7 @@ int main()
 
     /**
      * @brief Ordenamiento de Cadena
-     *
+     * Ordena segun el orden de  la tabla ASCII
      */
 
     // cadena => ordenada
@@ -153,7 +153,12 @@ int main()
     // int b = 'c' > 'b'; // 1
 
     // sort(inicio, fin)
+    // caso para cadenas
     sort(cadena.begin(), cadena.end());
+
+    // int array[8] =[12,22,34,4,5,0,2]
+    // sort(array, array + array.size());
+
     cout << cadena << endl;
 
     return 0;
