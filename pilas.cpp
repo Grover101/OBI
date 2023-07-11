@@ -7,6 +7,8 @@ int main()
     /**
      * @brief Pilas || stack
      * #include <stack>
+     * LIFO
+     * El primero en entrar es el ultimo en salir
      */
 
     // declarar
@@ -21,6 +23,9 @@ int main()
     // top -> es para ver el ultimo elemento de la pila
     // pop -> elimina el ultimo elemento en la pila
     int ul = pila.top();
+    pila.pop();
+    cout << ul << endl;
+    ul = pila.top();
     pila.pop();
     cout << ul << endl;
     ul = pila.top();
