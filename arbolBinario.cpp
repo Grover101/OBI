@@ -65,6 +65,30 @@ void recorridoPostOrderRecursivo(Nodo *nodo)
     return;
 }
 
+void recorridoInOrder(Nodo *raiz)
+{
+    if (raiz != nullptr)
+    {
+        stack<Nodo *> pila;
+        Nodo *actual = raiz;
+
+        while (actual != nullptr || !pila.empty())
+        {
+            while (actual != nullptr)
+            {
+                pila.push(actual);
+                actual = actual->izquierda;
+            }
+
+            actual = pila.top();
+            pila.pop();
+
+            cout << actual->valor << " ";
+            actual = actual->derecha;
+        }
+    }
+}
+
 int main()
 {
 
@@ -91,6 +115,8 @@ int main()
     cout << "\nRecorrido en Post Orden Recursivo:\n";
     recorridoPostOrderRecursivo(raiz);
 
+    cout << "\nRecorrido en In Orden Pilas y While:\n";
+    recorridoInOrder(raiz);
     cout << endl;
 
     return 0;
