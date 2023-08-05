@@ -117,6 +117,36 @@ void recorridoInOrder(Nodo *raiz)
     }
 }
 
+void recorridoPostOrder(Nodo *raiz)
+{
+    if (raiz != nullptr)
+    {
+        stack<Nodo *> pila;
+        stack<int> valores;
+
+        pila.push(raiz);
+
+        while (!pila.empty())
+        {
+            Nodo *nodo = pila.top();
+
+            valores.push(node->valor);
+
+            pila.pop();
+
+            if (nodo->izquierda != nullptr)
+            {
+                pila.push(nodo->izquierda);
+            }
+
+            if (nodo->derecha != nullptr)
+            {
+                pila.push(nodo->derecha);
+            }
+        }
+    }
+}
+
 int main()
 {
 
